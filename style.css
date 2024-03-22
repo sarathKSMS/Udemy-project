@@ -49,8 +49,8 @@ body{
 
 
 .navbar_s3{
-  display: flex;
-  gap: 10px;
+  display:flex;
+  gap: 20px;
 }
 
 .mylearning{
@@ -92,8 +92,19 @@ body{
   color: white;
   border-radius: 30px;
   padding: 10px;
-
+  border: solid rgb(158, 54, 237) 1px;
+  cursor: pointer;
 }
+
+
+.topics p:hover{
+  transition: 1s;
+  color: black;
+  background-color: white;
+  border: solid rgb(158, 54, 237) 1px;
+}
+
+
 .sale-img img{
   width: 100%;
 }
@@ -111,7 +122,25 @@ body{
   text-align: center;
   top: 100px;
   left: 50px;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-name: zoom;
+  animation-duration: 2s;
 }
+
+@keyframes zoom {
+
+  0%{
+    opacity: 0;
+    transform: scale(0);
+  }
+  
+  100%{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 
 .recommended{
   padding: 10px;
@@ -176,7 +205,6 @@ body{
 }
 
 .footer{
-
   background-color: black;
   color: white;
   padding: 30px;
